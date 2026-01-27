@@ -1,0 +1,149 @@
+body {
+    background: #0A0F1F;
+    color: #F5F7FA;
+    font-family: Arial;
+}
+
+.topbar {
+    background: #0D6EFD;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.community-container {
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+}
+
+/* BARRA LATERAL */
+.sidebar {
+    width: 240px;
+    background: #1A1F2E;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.sidebar ul li:hover, .sidebar ul li.active {
+    background: #2A3042;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 18px rgba(0,0,0,0.4);
+}
+
+/* CHAT */
+.chat-card {
+    grid-column: span 2;
+}
+
+.chat-body {
+    background: #1A1F2E;
+    padding: 15px;
+    height: 250px;
+    overflow-y: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.msg {
+    background: #2A3042;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.msg.prof {
+    background: #0D6EFD;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: #2A3042;
+    color: white;
+}
+
+/* FÓRUM */
+.forum-post {
+    background: #1A1F2E;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    background: #0D6EFD;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* PERFIS */
+.profiles-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.profile {
+    background: #1A1F2E;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 150px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* GRUPOS EXTERNOS */
+.groups-buttons .btn {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.discord { background: #5865F2; }
+.whatsapp { background: #25D366; }
+.telegram { background: #1C98E8; }
+

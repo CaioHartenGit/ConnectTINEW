@@ -1,0 +1,93 @@
+/* HERO */
+.hero-pratique {
+  background: url("https://i.imgur.com/EQSGL8p.jpeg") center/cover no-repeat;
+  height: 45vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero-pratique .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+.hero-pratique .content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.hero-pratique h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+.hero-pratique p {
+  font-size: 1.2rem;
+}
+
+/* TITULOS */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* CARDS PRINCIPAIS */
+.practice-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  transition: .3s;
+}
+.practice-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.practice-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+.practice-card .text {
+  padding: 18px;
+}
+.practice-card h4 { font-weight: 600; }
+
+/* DESAFIOS — CARROSSEL */
+.desafio-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+.desafio-card img {
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* EXTRA */
+.extra-card {
+  background: #f8f9fb;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid #e4e6eb;
+  transition: .3s;
+}
+.extra-card:hover {
+  background: #eaf1ff;
+  border-color: #bcd2ff;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #0b0f19;
+  padding: 40px 0;
+  color: #d4d7df;
+}

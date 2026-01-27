@@ -1,0 +1,117 @@
+:root{
+  --bg:#071023;
+  --glass: rgba(255,255,255,0.04);
+  --accent:#00e1a7;
+  --muted:#9aa3b2;
+  --card:#0f1720;
+  --neon: rgba(0,225,167,0.12);
+  font-family: 'Poppins', sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#e6eef5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* Loader */
+.loader-full{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#071023 0%, #02030b 100%);z-index:99999}
+.loader-box{display:flex;flex-direction:column;align-items:center;gap:12px}
+.loader-logo{font-size:28px;color:var(--accent);font-weight:700;letter-spacing:1px}
+.loader-sub{color:var(--muted)}
+.loader-ring{width:54px;height:54px;border-radius:50%;border:4px solid rgba(255,255,255,0.06);border-top-color:var(--accent);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* particles container */
+#bg-particles{position:fixed;inset:0;z-index:-1}
+
+/* header/nav */
+.site-header{position:sticky;top:0;z-index:1000;background:transparent;padding:12px 0}
+.nav-bar{display:flex;align-items:center;justify-content:space-between}
+.brand a{color:var(--accent);font-weight:700;text-decoration:none;font-size:20px}
+.nav-links{list-style:none;display:flex;gap:20px;align-items:center}
+.nav-links a{color:#dfe7ef;text-decoration:none;padding:6px 8px;border-radius:8px;transition:all .18s}
+.nav-links a:hover{color:var(--accent);background:var(--glass)}
+.btn-theme{background:transparent;border:1px solid rgba(255,255,255,0.05);color:#fff;padding:6px 10px;border-radius:8px;cursor:pointer}
+
+/* hero */
+.hero{min-height:72vh;display:flex;align-items:center;padding:80px 15px}
+.hero-inner{display:flex;gap:40px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.hero-text{max-width:640px}
+.hero h1{font-size:38px;margin-bottom:14px;line-height:1.05;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,0.6)}
+.lead{color:var(--muted);margin-bottom:16px}
+.btn-primary{background:var(--accent);color:#002020;padding:12px 18px;border-radius:10px;text-decoration:none;border:none;font-weight:600}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#dfe7ef;padding:10px 14px;border-radius:10px}
+
+/* swiper hero */
+.swiper{width:320px;height:220px;border-radius:12px;overflow:hidden;box-shadow:0 10px 35px rgba(0,0,0,0.6);background:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.4))}
+.swiper-slide img{width:100%;height:100%;object-fit:cover}
+
+/* cards */
+.features{padding:40px 15px}
+.feature-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,0.6);text-align:center}
+.feature-card img{width:96px;margin-bottom:12px}
+
+/* highlights / counters */
+.highlights{padding:28px 15px}
+.stat{background:var(--card);padding:18px;border-radius:12px;text-align:center}
+.stat-number{font-size:24px;color:var(--accent);font-weight:700}
+.stat-label{color:var(--muted)}
+
+/* modules, practice etc */
+.card-trilha{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;text-align:center}
+.module-card,.practice-card,.challenge-card{background:var(--card);padding:18px;border-radius:10px;color:#cfe6ff}
+
+/* site footer */
+.site-footer{padding:40px 15px;margin-top:40px;background:linear-gradient(180deg, rgba(0,0,0,0.2), transparent)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px}
+.footer-grid h4,h5{color:var(--accent)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse;align-items:center}
+  .swiper{width:90%;height:220px}
+  .nav-links{display:none}
+}
+
+/* ====== Estilo ConnectTI ====== */
+
+body {
+    background: #f4f4f4;
+}
+
+/* HERO PERSONALIZADO */
+.hero {
+    background: linear-gradient(135deg, #0d6efd, #012b72);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* BOTÕES CENTRAIS */
+.area-acesso {
+    margin-top: -40px;
+}
+
+.card-acesso {
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card-acesso:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.btn-acesso {
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 18px;
+}
+
+

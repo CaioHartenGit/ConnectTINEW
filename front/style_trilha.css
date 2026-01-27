@@ -1,0 +1,171 @@
+body {
+    background: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner */
+.hero-section {
+    background: url("https://i.imgur.com/6TahpkG.jpeg") center/cover no-repeat;
+    padding: 100px 20px;
+    color: white;
+}
+
+.hero-section .title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Cards */
+.course-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform .3s;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-card .content {
+    padding: 20px;
+}
+
+.course-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.btn-course {
+    display: block;
+    background: #0d6efd;
+    color: white;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background .3s;
+}
+
+.btn-course:hover {
+    background: #084298;
+}
+/* BOTÃO FLUTUANTE */
+#ai-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0d6efd;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
+#ai-btn:hover {
+    scale: 1.1;
+    background: #0b5ed7;
+}
+
+/* JANELA DO CHAT */
+#ai-chat {
+    position: fixed;
+    bottom: 110px;
+    right: 25px;
+    width: 340px;
+    height: 450px;
+    background: #fff;
+    border-radius: 18px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+/* CABEÇALHO */
+.ai-header {
+    background: #0d6efd;
+    padding: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* MENSAGENS */
+#ai-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.user-msg, .bot-msg {
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 12px;
+    max-width: 80%;
+}
+
+.user-msg {
+    background: #e9ecef;
+    align-self: flex-end;
+}
+
+.bot-msg {
+    background: #0d6efd;
+    color: white;
+    align-self: flex-start;
+}
+
+/* INPUT */
+.ai-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.ai-input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.ai-input-area button {
+    margin-left: 8px;
+    width: 50px;
+    border: none;
+    background: #0d6efd;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
