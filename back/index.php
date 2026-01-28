@@ -213,7 +213,7 @@ footer a:hover { text-decoration: underline; }
             <div class="card-body text-center">
                 <h4 class="fw-bold">Trilhas de Estudo</h4>
                 <p>Acesse trilhas completas e vá do zero ao avançado.</p>
-                <a href="trilhas.html" class="btn btn-outline-primary">Ver trilhas</a>
+                <a href="trilhas.php" class="btn btn-outline-primary">Ver trilhas</a>
             </div>
         </div>
     </div>
@@ -223,7 +223,7 @@ footer a:hover { text-decoration: underline; }
             <div class="card-body text-center">
                 <h4 class="fw-bold">Prática</h4>
                 <p>Desafios reais para fixar os conteúdos na prática.</p>
-                <a href="pratique.html" class="btn btn-outline-primary">Praticar</a>
+                <a href="pratique.php" class="btn btn-outline-primary">Praticar</a>
             </div>
         </div>
     </div>
@@ -233,7 +233,7 @@ footer a:hover { text-decoration: underline; }
             <div class="card-body text-center">
                 <h4 class="fw-bold">Comunidade</h4>
                 <p>Interaja com alunos, troque dicas e tire suas dúvidas.</p>
-                <a href="comunidade.html" class="btn btn-outline-primary">Entrar</a>
+                <a href="comunidade.php" class="btn btn-outline-primary">Entrar</a>
             </div>
         </div>
     </div>
