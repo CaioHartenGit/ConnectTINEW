@@ -135,7 +135,7 @@ footer a:hover { text-decoration: underline; }
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
 <div class="container">
     <a class="navbar-brand d-flex align-items-center fw-bold" href="index.php">
-        <img src="Logo ConnectTI.png" alt="Logo ConnectTI" width="60" height="60" class="me-2">
+        <img src="../img/Logo ConnectTI.png" alt="Logo ConnectTI" width="60" height="60" class="me-2">
         ConnectTI
     </a>
 
@@ -161,7 +161,7 @@ footer a:hover { text-decoration: underline; }
             <li class="nav-item dropdown ms-3">
             <?php if (isset($_SESSION['nome'])): ?>
                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
-                    <img src="Logo ConnectTI.png" class="avatar-img me-2" alt="Avatar">
+                    <img src="../img/Logo ConnectTI.png" class="avatar-img me-2" alt="Avatar">
                     <span><?php echo $_SESSION['nome']; ?></span>
                 </a>
 
@@ -177,7 +177,7 @@ footer a:hover { text-decoration: underline; }
                 </ul>
             <?php else: ?>
                 <a class="nav-link d-flex align-items-center" href="login.php">
-                    <img src="Logo ConnectTI.png" class="avatar-img me-2" alt="Avatar">
+                    <img src="../img/Logo ConnectTI.png" class="avatar-img me-2" alt="Avatar">
                     <span>Convidado</span>
                 </a>
             <?php endif; ?>
@@ -465,7 +465,7 @@ footer a:hover { text-decoration: underline; }
         <div class="modal-body">
             <form id="profileForm">
                 <div class="mb-3 text-center">
-                    <img src="/mnt/data/Logo ConnectTI.png" id="profileAvatarPreview" class="avatar-img mb-2" style="width:100px;height:100px;">
+                    <img src="../img/Logo ConnectTI.png" id="profileAvatarPreview" class="avatar-img mb-2" style="width:100px;height:100px;">
                     <input class="form-control" type="file" id="profileAvatar" accept="image/*">
                     <button type="button" class="btn btn-danger btn-sm mt-2" id="removeAvatarBtn">Remover Foto</button>
                 </div>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
       <!-- Se for PNG -->
-<link rel="icon" type="image/png" href="Logo ConnectTI.png">
+<link rel="icon" type="image/png" href="../img/Logo ConnectTI.png">
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -19,7 +19,7 @@
   }
   body{background:var(--bg); color:#e6eef6; font-family:Inter, system-ui, Arial, sans-serif; margin:0;}
   .topbar{height:68px; display:flex; align-items:center; padding:0 28px; gap:20px; background:linear-gradient(180deg, rgba(0,0,0,0.25), transparent);}
-  .brand{font-weight:800; color:white; font-size:22px;}
+  .brand{font-weight:800; color:white; font-size:22px; text-decoration:none;}
   .search {margin-left:auto; width:320px;}
   .search input{width:100%; padding:8px 12px; border-radius:8px; border:none; background:#0b1117; color:#cfe3ff;}
   .container-main{padding:22px 34px 60px;}
@@ -88,7 +88,7 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <div class="brand">ConnectTI</div>
+    <a href="index.php" class="brand">ConnectTI</a>
 
     <div class="controls">
       <div class="chip">Trilhas</div>

@@ -23,7 +23,7 @@
 
   /* ===== TOPBAR ===== */
   .topbar{height:68px;display:flex;align-items:center;padding:0 20px;background:linear-gradient(180deg, rgba(0,0,0,0.2), transparent);gap:12px}
-  .brand{font-weight:800;font-size:20px;color:#fff;margin-right:12px}
+  .brand{font-weight:800;font-size:20px;color:#fff;margin-right:12px; text-decoration:none;}
   .search {margin-left:auto; width:360px}
   .search input{width:100%;padding:8px 12px;border-radius:8px;border:0;background:#081018;color:#dbeaff}
   .small-btn{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:#dbeaff;cursor:pointer}
@@ -107,7 +107,7 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <div class="brand">ConnectTI</div>
+    <a href="index.php" class="brand">ConnectTI</a>
     <div style="display:flex;gap:8px">
       <button class="small-btn" id="btnDaily">Desafio do Dia</button>
       <button class="small-btn" id="btnGames">Mini-Jogos</button>

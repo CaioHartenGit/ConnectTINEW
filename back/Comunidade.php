@@ -23,7 +23,7 @@ a{color:var(--accent);text-decoration:none}
 
 /* Topbar */
 .topbar{height:72px;display:flex;align-items:center;padding:0 22px;background:linear-gradient(90deg, rgba(13,110,253,0.12), rgba(157,75,255,0.06));border-bottom:1px solid rgba(255,255,255,0.02)}
-.brand{font-weight:800;font-size:20px;color:#fff;margin-right:12px}
+.brand{font-weight:800;font-size:20px;color:#fff;margin-right:12px; text-decoration:none;}
 .top-actions{margin-left:auto;display:flex;gap:10px;align-items:center}
 
 /* Layout */
@@ -62,7 +62,7 @@ a{color:var(--accent);text-decoration:none}
 
 <!-- TOPBAR -->
 <div class="topbar">
-  <div class="brand">ConnectTI <span style="color:var(--accent-2);font-weight:700;margin-left:8px">Comunidade Pro</span></div>
+  <a href="index.php" class="brand">ConnectTI <span style="color:var(--accent-2);font-weight:700;margin-left:8px">Comunidade Pro</span></a>
   <div style="display:flex;gap:10px;align-items:center;width:100%;max-width:720px">
     <input id="globalSearch" placeholder="Pesquisar posts, usuários, grupos..." class="input-ghost" />
   </div>

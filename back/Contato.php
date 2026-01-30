@@ -171,7 +171,7 @@ textarea {
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.php">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="contato.php">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="trilhas.php">Trilhas</a></li>
         <li class="nav-item"><a class="nav-link" href="pratique.php">Pratique</a></li>
         <li class="nav-item"><a class="nav-link" href="comunidade.php">Comunidade</a></li>
