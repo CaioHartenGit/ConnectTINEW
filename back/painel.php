@@ -1,9 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) {
+
+if (!isset($_SESSION['nome']) || !isset($_SESSION['tipo'])) {
     header("Location: login.php");
     exit;
 }
+
+$tipo = $_SESSION['tipo'];
+
 ?>
 
 <!DOCTYPE html>
@@ -15,9 +19,15 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body class="p-4">
 
-<h2>Bem-vindo, <?php echo $_SESSION['user']; ?>!</h2>
+<h2>Bem-vindo, <?php echo $_SESSION['nome']; ?>!</h2>
+
+<?php if ($tipo === 'aluno'): ?>
+    <p>Você está logado como <strong>Aluno</strong></p>
+<?php else: ?>
+    <p>Você está logado como <strong>Docente</strong></p>
+<?php endif; ?>
+
 <a href="logout.php" class="btn btn-danger mt-3">Sair</a>
 
 </body>
 </html>
-
