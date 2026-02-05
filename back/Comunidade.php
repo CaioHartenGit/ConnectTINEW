@@ -11,51 +11,371 @@
 <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 <style>
-/* ============= THEME (compact) ============= */
+/* =====================================================
+   RESET + VARIÁVEIS
+===================================================== */
 :root{
-  --bg:#071026; --panel:rgba(255,255,255,0.04); --muted:#9fb0c8;
-  --accent:#0d6efd; --accent-2:#9d4bff; --glass:rgba(255,255,255,0.03);
-  --card-radius:12px; --gap:18px;
+  --bg:#020617;
+  --panel:#020617;
+  --card:#0b1220;
+  --glass:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.08);
+  --muted:#94a3b8;
+  --text:#ffffff; /* texto padrão branco */
+  --accent:#2563eb;
+  --accent-2:#9333ea;
+  --radius:14px;
+  --gap:20px;
 }
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#04101b,#071026 60%);color:#e6f2ff;font-family:Inter,system-ui,Arial;min-height:100vh;}
-a{color:var(--accent);text-decoration:none}
 
-/* Topbar */
-.topbar{height:72px;display:flex;align-items:center;padding:0 22px;background:linear-gradient(90deg, rgba(13,110,253,0.12), rgba(157,75,255,0.06));border-bottom:1px solid rgba(255,255,255,0.02)}
-.brand{font-weight:800;font-size:20px;color:#fff;margin-right:12px; text-decoration:none;}
-.top-actions{margin-left:auto;display:flex;gap:10px;align-items:center}
+*{
+  box-sizing:border-box;
+}
 
-/* Layout */
-.app{display:grid;grid-template-columns:260px 1fr 360px;gap:18px;padding:18px;min-height:calc(100vh - 72px)}
-.sidebar{background:var(--panel);border-radius:var(--card-radius);padding:16px;height:calc(100vh - 110px);overflow:auto;border:1px solid rgba(255,255,255,0.03)}
-.nav-item{display:flex;align-items:center;gap:12px;padding:10px;border-radius:10px;color:var(--muted);cursor:pointer}
-.nav-item.active,.nav-item:hover{background:rgba(13,110,253,0.06);color:#fff}
+body{
+  margin:0;
+  min-height:100vh;
+  background:radial-gradient(circle at top, #0b1220, #020617 75%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Arial;
+}
 
-/* Main */
-.main{min-height:calc(100vh - 110px);padding:8px;overflow:auto}
-.card{background:var(--glass);border-radius:12px;padding:14px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 10px 30px rgba(3,6,14,0.6)}
+/* =====================================================
+   TOPBAR
+===================================================== */
+.topbar{
+  height:72px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:0 24px;
+  background:linear-gradient(
+    90deg,
+    rgba(37,99,235,.25),
+    rgba(147,51,234,.15)
+  );
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
+}
 
-/* Simple responsive */
-@media(max-width:1100px){.app{grid-template-columns:1fr;padding:14px}.rightcol{display:none}}
-/* content sections */
-.section{display:none}
-.section.active{display:block}
+.brand{
+  font-weight:800;
+  font-size:20px;
+  color:#fff;
+  text-decoration:none;
+  white-space:nowrap;
+}
 
-/* small utility */
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff;padding:6px 10px;border-radius:8px}
-.input-ghost{background:rgba(255,255,255,0.02);border:none;padding:8px;border-radius:8px;color:#e6f2ff;width:100%}
-.post{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00))}
-.post .avatar{width:56px;height:56px;border-radius:10px;overflow:hidden;flex-shrink:0}
-.post .avatar img{width:100%;height:100%;object-fit:cover}
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.gallery-grid img{width:100%;height:140px;object-fit:cover;border-radius:8px;cursor:pointer;transition:transform .12s}
-.gallery-grid img:hover{transform:scale(1.03)}
-.thread{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00))}
-.profile-card{width:120px;padding:10px;border-radius:10px;text-align:center;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00))}
-.profile-card img{width:80px;height:80px;object-fit:cover;border-radius:10px;margin-bottom:8px}
-.blog-card{display:flex;gap:12px;align-items:flex-start}
-.blog-card img{width:140px;height:90px;object-fit:cover;border-radius:8px}
+.top-actions{
+  margin-left:auto;
+  display:flex;
+  gap:10px;
+}
+
+/* =====================================================
+   LAYOUT PRINCIPAL
+===================================================== */
+.app{
+  display:grid;
+  grid-template-columns:260px 1fr 340px;
+  gap:var(--gap);
+  padding:var(--gap);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+.sidebar{
+  background:linear-gradient(180deg,#020617,#020617cc);
+  border-radius:var(--radius);
+  padding:18px;
+  border:1px solid var(--border);
+  box-shadow:0 20px 40px rgba(0,0,0,.55);
+}
+
+.sidebar h4{
+  font-size:15px;
+  margin-bottom:12px;
+  color:#fff;
+}
+
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:10px;
+  color:var(--muted);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.nav-item i{
+  font-size:18px;
+}
+
+.nav-item:hover{
+  background:rgba(255,255,255,.05);
+  color:#fff;
+}
+
+.nav-item.active{
+  background:linear-gradient(
+    90deg,
+    rgba(37,99,235,.35),
+    rgba(147,51,234,.25)
+  );
+  color:#fff;
+}
+
+/* =====================================================
+   MAIN
+===================================================== */
+.main{
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap);
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+.card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02)
+  );
+  border-radius:var(--radius);
+  padding:18px;
+  border:1px solid var(--border);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.5),
+    inset 0 0 0 1px rgba(255,255,255,.03);
+}
+
+.card h2,
+.card h4,
+.card h5{
+  margin:0 0 8px;
+  color:#fff;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+
+.hero p{
+  margin:6px 0 0;
+  color:#ffffff;
+}
+
+/* =====================================================
+   FEED / POSTS
+===================================================== */
+.post{
+  display:flex;
+  gap:14px;
+  padding:14px;
+  border-radius:12px;
+  background:rgba(0,0,0,.35);
+  border:1px solid var(--border);
+  color:#ffffff;
+}
+
+.post + .post{
+  margin-top:14px;
+}
+
+.post *{
+  color:#ffffff;
+}
+
+.post h5,
+.post h4,
+.post b{
+  color:#ffffff;
+}
+
+.post p{
+  margin:8px 0 0;
+  color:#f1f5f9;
+}
+
+.post small,
+.post .time{
+  color:#f1f5f9;
+}
+
+.post .avatar img{
+  width:56px;
+  height:56px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+/* Comentários */
+.post [id^="comments_"] div{
+  background:rgba(255,255,255,0.03);
+  padding:8px;
+  border-radius:8px;
+  color:#ffffff;
+}
+
+.post [id^="comments_"] b{
+  color:#ffffff;
+}
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  border:none;
+  color:#fff;
+}
+
+.btn-outline-light{
+  border-color:rgba(255,255,255,.25);
+  color:#fff;
+}
+
+.btn-outline-light:hover{
+  background:rgba(255,255,255,.08);
+}
+
+/* =====================================================
+   INPUTS / TEXTAREA / COMENTÁRIOS
+===================================================== */
+.input-ghost,
+input,
+textarea{
+  width:100%;
+  background:rgba(0,0,0,.35);
+  border:1px solid var(--border);
+  padding:10px 12px;
+  border-radius:10px;
+  color:#ffffff;
+  font-family:inherit;
+  font-size:14px;
+}
+
+/* Placeholder */
+.input-ghost::placeholder,
+input::placeholder,
+textarea::placeholder{
+  color:var(--muted);
+}
+
+/* Focus */
+.input-ghost:focus,
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  background:rgba(232, 230, 230, 0.45);
+  color:#ffffff;
+  box-shadow:0 0 0 2px rgba(37,99,235,.25);
+}
+
+/* Textarea */
+textarea{
+  resize:none;
+  line-height:1.5;
+}
+
+/* Autofill Chrome */
+input:-webkit-autofill,
+textarea:-webkit-autofill{
+  -webkit-text-fill-color:#ffffff;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color:#fff;
+}
+
+/* =====================================================
+   RIGHT COLUMN (XP / RANKING / NOTIFICAÇÕES)
+===================================================== */
+.rightcol{
+  display:flex;
+  flex-direction:column;
+  gap:var(--gap);
+  color:#ffffff; /* força tudo branco */
+}
+
+.rightcol .card{
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,.07),
+    rgba(255,255,255,.03)
+  );
+}
+
+.rightcol .card *{
+  color:#ffffff; /* textos de XP, ranking, notificações branco */
+}
+
+/* força tudo branco na coluna direita, inclusive small/time */
+.rightcol .card small,
+.rightcol .card .time{
+  color:#ffffff !important;
+}
+
+/* =====================================================
+   GALERIA
+===================================================== */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid var(--border);
+  transition:.2s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.04);
+}
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+.section{
+  display:none;
+}
+
+.section.active{
+  display:block;
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+@media(max-width:1100px){
+  .app{
+    grid-template-columns:1fr;
+  }
+
+  .rightcol{
+    display:none;
+  }
+  .rightcol .card small,
+  .rightcol .card .time{
+  color:#ffffff !important;
+}
+
+}
 </style>
 </head>
 <body>

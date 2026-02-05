@@ -1,5 +1,14 @@
 <?php
 session_start();
+
+/* =============================
+   FOTO DO USUÁRIO (CORRETA)
+============================= */
+$fotoUsuario = '../img/Logo ConnectTI.png';
+
+if (!empty($_SESSION['foto'])) {
+    $fotoUsuario = '../' . $_SESSION['foto'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -161,7 +170,12 @@ footer a:hover { text-decoration: underline; }
             <li class="nav-item dropdown ms-3">
             <?php if (isset($_SESSION['nome'])): ?>
                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" role="button" data-bs-toggle="dropdown">
-                    <img src="../img/Logo ConnectTI.png" class="avatar-img me-2" alt="Avatar">
+                    <img 
+                    src="<?= $fotoUsuario ?>"
+                    onerror="this.src='../img/Logo ConnectTI.png'"
+                    class="avatar-img me-2" 
+                    alt="Foto de perfil do usuário"
+                    >
                     <span><?php echo $_SESSION['nome']; ?></span>
                 </a>
 
@@ -515,60 +529,6 @@ toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-/*// Profile Handling
-const profileForm = document.getElementById('profileForm');
-const profileAvatar = document.getElementById('profileAvatar');
-const profileAvatarPreview = document.getElementById('profileAvatarPreview');
-const profileName = document.getElementById('profileName');
-const navAvatar = document.getElementById('navAvatar');
-const navUserName = document.getElementById('navUserName');
-const removeAvatarBtn = document.getElementById('removeAvatarBtn');
-
-profileAvatar.addEventListener('change', (e) => {
-    const file = e.target.files[0];
-    if(file){
-        const reader = new FileReader();
-        reader.onload = () => {
-            profileAvatarPreview.src = reader.result;
-        }
-        reader.readAsDataURL(file);
-    }
-});
-
-removeAvatarBtn.addEventListener('click', () => {
-    profileAvatarPreview.src = '/mnt/data/Logo ConnectTI.png';
-    profileAvatar.value = '';
-});
-
-profileForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const avatarSrc = profileAvatarPreview.src;
-    const nome = profileName.value.trim() || 'Convidado';
-    localStorage.setItem('avatar', avatarSrc);
-    localStorage.setItem('nome', nome);
-    navAvatar.src = avatarSrc;
-    navUserName.textContent = nome;
-    bootstrap.Modal.getInstance(document.getElementById('profileModal')).hide();
-});
-
-// Simulate login (n precisa mais)
-document.getElementById('loginSimulate').addEventListener('click', () => {
-    const avatarSrc = '/mnt/data/Logo ConnectTI.png';
-    const nome = 'Aluno Teste';
-    localStorage.setItem('avatar', avatarSrc);
-    localStorage.setItem('nome', nome);
-    navAvatar.src = avatarSrc;
-    navUserName.textContent = nome;
-    document.getElementById('loginModal').querySelector('.btn-close').click();
-});
-
-// Logout
-document.getElementById('logoutBtn').addEventListener('click', () => {
-    localStorage.removeItem('avatar');
-    localStorage.removeItem('nome');
-    navAvatar.src = '/mnt/data/Logo ConnectTI.png';
-    navUserName.textContent = 'Convidado';
-});*/
 </script>
 </body>
 </html>
