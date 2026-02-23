@@ -28,7 +28,7 @@ $nome = $_SESSION['nome'] ?? 'Usuário';
     <link rel="stylesheet" href="../styles/trilhas.css">
     
     <!-- CSS do Chat IA -->
-    <link rel="stylesheet" href="../styles/AI.css">
+    <link rel="stylesheet" href="../styles/ai.css">
 </head>
 <body>
 
@@ -169,23 +169,9 @@ $nome = $_SESSION['nome'] ?? 'Usuário';
             <button id="aiCloseBtn">✕</button>
         </div>
 
-        <div id="aiMessages">
+        <!-- IMPORTANTE: vazio -->
+        <div id="aiMessages"></div>
 
-            <div class="msg-ai">
-                Olá! 👋 Sou o assistente da ConnectTI.<br>
-                Como posso ajudar?
-            </div>
-
-            <div class="ai-options">
-                <button class="ai-option" data-q="trilha">📚 Qual trilha escolher?</button>
-                <button class="ai-option" data-q="comecar">🚀 Como começar?</button>
-                <button class="ai-option" data-q="cursos">❤️ Meus cursos</button>
-                <button class="ai-option" data-q="estudo">🧠 Dicas de estudo</button>
-            </div>
-
-        </div>
-
-        <!-- INPUT FICA DENTRO DO CHAT -->
         <div class="ai-input-area">
             <input type="text" id="aiUserInput" placeholder="Digite sua dúvida...">
             <button id="aiSendBtn">Enviar</button>
@@ -205,7 +191,7 @@ $nome = $_SESSION['nome'] ?? 'Usuário';
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/trilhas.js"></script>
-    <script src="../scripts/AI.js"></script>
+    <script src="../scripts/ai.js"></script>
 
 </body>
 </html>
